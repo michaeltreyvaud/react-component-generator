@@ -6,7 +6,7 @@ React component generator
 Install globally
 
 ```js
-npm install -g
+npm install -g @hypermediocrity/react-component-generator
 ```
 
 ## Example
@@ -111,8 +111,6 @@ The contents of the MyComponent.module.css file are as follows
 
 # TODO
 
-- Make installable
-- Publish to npm
 - Additional options
     - No style
     - Typescript
