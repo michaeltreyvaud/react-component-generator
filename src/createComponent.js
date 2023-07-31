@@ -13,13 +13,19 @@ const formatIndexName = (dir) => path.resolve(`${dir}${path.sep}${INDEX_NAME}${J
 const formatComponentFileName = (dir, name) => path.resolve(`${dir}${path.sep}${name}${JS_EXTENSION}`);
 const formatComponentStyleName = (dir, name) => path.resolve(`${dir}${path.sep}${name}${CSS_EXTENSION}`);
 
-const createComponent = async (dir, name) => {
-  const componentIndex = generateIndex(name);
+const createComponent = async (name, dir, options) => {
+  const { subdir } = options;
+  if (subdir) {
+    // Create index.js file
+    const indexContent = generateIndex(name);
+    await fs.writeFile(formatIndexName(dir, name), indexContent);
+  }
   const componentContent = generateContent(name);
-  const componentStyle = generateStyle(name);
-  await fs.writeFile(formatIndexName(dir, name), componentIndex);
+  const styleContent = generateStyle(name);
+  // Create component.js file
   await fs.writeFile(formatComponentFileName(dir, name), componentContent);
-  await fs.writeFile(formatComponentStyleName(dir, name), componentStyle);
+  // Create style.css file
+  await fs.writeFile(formatComponentStyleName(dir, name), styleContent);
 };
 
 module.exports = createComponent;

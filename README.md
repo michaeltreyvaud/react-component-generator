@@ -4,34 +4,65 @@ React dummy component generator
 ## Get Started
 
 Install dependencies
+
 ```js
 npm install
 ```
 
-## How To
+## Example
 
 Generate a component using the following command
 ```js
-node index.js generate DirectoryName ComponentName
+node index.js generate MyComponent
 ```
 
-Where DirectoryName is the location you would like to place your new component and ComponentName is the name of the component you want to generate
+This will generate the following files
 
-## Example
+- MyComponent.js
+- MyComponent.module.css
 
-The following command
+
+## Options
+
+You can view the available options as follows
+```js
+node index.js generate --help
 ```
-node index.js generate MyDirectoy MyComponent
+
+| Option   |      Description      |  Default |
+|----------|:-------------|------:|
+| -d, --directory <directory> |  Directory to place component | Directory where command was issued |
+| --subdir |    Places component into its own directory location   |   false |
+
+
+## Example using -d
+
+Generate a component using the following command
+```js
+node index.js generate MyComponent -d MyDirectory
 ```
 
-Will generate the following files
+This will generate the following files
 
-- MyDirectoy
-    - MyComponent
-        - index.js
-        - MyComponent.js
-        - MyComponent.module.css
+- MyDirectory
+  - MyComponent.js
+  - MyComponent.module.css
 
+
+## Example using -d and --subdir
+
+Generate a component using the following command
+```js
+node index.js generate MyComponent -d MyDirectory --subdir
+```
+
+This will generate the following files
+
+- MyDirectory
+  - MyComponent
+    - index.js
+    - MyComponent.js
+    - MyComponent.module.css
 
 ### index.js content
 
@@ -79,10 +110,8 @@ The contents of the MyComponent.module.css file are as follows
 
 # TODO
 
-- Make globally available
+- Make installable
 - Publish to npm
-- Component options
-    - No index
-    - No dir
+- Additional options
     - No style
-    - Typescript options
+    - Typescript
