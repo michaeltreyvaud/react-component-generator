@@ -1,5 +1,5 @@
 # react-component-generator
-React dummy component generator
+React component generator
 
 ## Get Started
 

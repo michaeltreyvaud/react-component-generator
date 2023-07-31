@@ -1,10 +1,10 @@
 {
-  "name": "react-component-generator",
-  "version": "1.0.0",
-  "description": "React dummy component generator",
+  "name": "@hypermediocrity/react-component-generator",
+  "version": "0.0.1",
+  "description": "React component generator",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "bin": {
+    "rcg": "./index.js"
   },
   "repository": {
     "type": "git",

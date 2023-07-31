@@ -1,6 +1,7 @@
 const createDirectory = require('./createDirectory');
 const createComponent = require('./createComponent');
 
+// Ensure capital first letter
 const formatComponentName = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 const generate = async (name, options) => {
