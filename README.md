@@ -1,19 +1,19 @@
 # react-component-generator
 React component generator
 
-## Get Started
+## Install
 
-Install dependencies
+Install globally
 
 ```js
-npm install
+npm install -g
 ```
 
 ## Example
 
 Generate a component using the following command
 ```js
-node index.js generate MyComponent
+rcg generate MyComponent
 ```
 
 This will generate the following files
@@ -26,7 +26,7 @@ This will generate the following files
 
 You can view the available options as follows
 ```js
-node index.js generate --help
+rcg generate --help
 ```
 
 | Option   |      Description      |  Default |
@@ -39,8 +39,8 @@ node index.js generate --help
 
 Generate a component using the following command
 ```js
-node index.js generate MyComponent -d MyDirectory
-node index.js generate MyComponent --directory MyDirectory
+rcg generate MyComponent -d MyDirectory
+rcg generate MyComponent --directory MyDirectory
 ```
 
 This will generate the following files
@@ -54,7 +54,7 @@ This will generate the following files
 
 Generate a component using the following command
 ```js
-node index.js generate MyComponent -d MyDirectory --subdir
+rcg generate MyComponent -d MyDirectory --subdir
 ```
 
 This will generate the following files
