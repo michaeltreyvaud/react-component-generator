@@ -35,11 +35,12 @@ node index.js generate --help
 | --subdir |    Places component into its own directory location   |   false |
 
 
-## Example using -d
+## Example using -d or --directory
 
 Generate a component using the following command
 ```js
 node index.js generate MyComponent -d MyDirectory
+node index.js generate MyComponent --directory MyDirectory
 ```
 
 This will generate the following files
